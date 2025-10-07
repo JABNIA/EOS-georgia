@@ -1,4 +1,3 @@
-import { useLocation } from "react-router-dom";
 import "./styles/header.scss";
 import { IoIosSearch } from "react-icons/io";
 import { PiUserCircleLight } from "react-icons/pi";
@@ -8,7 +7,6 @@ import { useState } from "react";
 import ListItem from "./categories/components/ListItem";
 
 function Header() {
-  const page = useLocation();
   const [menu, setMenu] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
 

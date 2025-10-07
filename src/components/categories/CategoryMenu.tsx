@@ -1,4 +1,3 @@
-import React from 'react'
 import '../styles/category-menu.scss';
 import Body from './components/Body';
 import Shave from './components/Shave';
@@ -8,7 +7,8 @@ import About from './components/About';
 
 function CategoryMenu({menu} : {menu: string}) {
   return (
-  <div className='category-menu-wrapper'>
+  <div className='category-menu-wrapper'
+  >
     <div>
         <ul>
             <li className="category-item">ყველა პროდუქტი</li>
