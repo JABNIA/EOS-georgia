@@ -5,13 +5,10 @@ import { IoCartOutline } from "react-icons/io5";
 import CategoryMenu from "./categories/CategoryMenu";
 import { useState } from "react";
 import ListItem from "./categories/components/ListItem";
-import { useTranslation } from "react-i18next";
 
 function Header() {
   const [menu, setMenu] = useState("");
   const [isMenuOpen, setIsMenuOpen] = useState(false);
-
-  const { t: tCommon } = useTranslation("common");
 
   const handleSetMenu = (menu: string) => {
     setMenu(menu);

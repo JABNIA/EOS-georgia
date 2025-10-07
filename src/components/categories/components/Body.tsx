@@ -13,7 +13,7 @@ function Body() {
         <li className="category-item">{t("bodyLotion")}</li>
         <li className="category-item">{t("bodyWash")}</li>
         <li className="category-item">{t("vanillaCashmere")}</li>
-        <li className="category-item">{t("vanillaCashmere")}</li>
+        <li className="category-item">{t("handCare")}</li>
       </ul>
     </div>
   );

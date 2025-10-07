@@ -14,14 +14,14 @@ function CategoryMenu({menu} : {menu: string}) {
   >
     <div>
         <ul>
-            <li className="category-item">ყველა პროდუქტი</li>
-            <li className="category-item">სიახლე</li>
-            <li className="category-item">ბესტსელერები</li>
+            <li className="category-item">{tCommon("all")}</li>
+            <li className="category-item">{tCommon("new")}</li>
+            <li className="category-item">{tCommon("bestsellers")}</li>
         </ul>
         <ul>
-            <li className="category-item">ექსკლუზივი</li>
-            <li className="category-item">დაჯილდოვებულები</li>
-            <li className="category-item">საჩუქრები და პაკეტები</li>
+            <li className="category-item">{tCommon("exclusives")}</li>
+            <li className="category-item">{tCommon("awardWinners")}</li>
+            <li className="category-item">{tCommon("giftsAndBundles")}</li>
         </ul>
     </div>
     {   menu === "body" && <Body /> }
