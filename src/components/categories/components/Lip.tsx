@@ -1,15 +1,18 @@
+import { useTranslation } from "react-i18next"
 
 function Lip() {
+  const { t } = useTranslation("categoryMenu")
+
   return (
     <div>
         <ul>
-        <li className="category-item">ყველა</li>
-        <li className="category-item">ტუჩის ბალზამი</li>
-        <li className="category-item">სულერ ბალზამები</li>
-        <li className="category-item">შეზღუდული რაოდენობის პროდუქცია</li>
-        <li className="category-item">ნაკრებები და პაკეტები</li>
-        <li className="category-item">მოვლა და ნიღბები</li>
-        <li className="category-item">მცენარეული პროდუქტები</li>
+        <li className="category-item">{t("allLip")}</li>
+        <li className="category-item">{t("lipBalm")}</li>
+        <li className="category-item">{t("superBalms")}</li>
+        <li className="category-item">{t("limitedEdition")}</li>
+        <li className="category-item">{t("setsAndVariety")}</li>
+        <li className="category-item">{t("treeatmentsAndMasks")}</li>
+        <li className="category-item">{t("plantBased")}</li>
       </ul>
     </div>
   )

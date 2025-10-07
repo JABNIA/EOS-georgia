@@ -4,8 +4,11 @@ import Shave from './components/Shave';
 import Lip from './components/Lip';
 import Fragrance from './components/Fragrance';
 import About from './components/About';
+import { useTranslation } from 'react-i18next';
 
 function CategoryMenu({menu} : {menu: string}) {
+  const { t: tCommon } = useTranslation("common")
+
   return (
   <div className='category-menu-wrapper'
   >

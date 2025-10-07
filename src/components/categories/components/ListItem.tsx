@@ -14,6 +14,13 @@ function ListItem({
 }) {
   const { t: tHeader } = useTranslation();
 
+  if (navText === "sale") {
+    return ( 
+    <li className="category-menu">
+      <p className="nav-text-title">{tHeader(navText)}</p> 
+    </li>
+ ) 
+}
   return (
     <li
       className="category-menu"
@@ -22,15 +29,15 @@ function ListItem({
         setMenuOpen(true)
     }}
       onClick={() => handleSetMenu(navText)}
-      onMouseLeave={() => {
-        const menuTimeout = setTimeout(
-            () => {
-                handleSetMenu("");
-                setMenuOpen(false)
-            }, 3000)
+      // onMouseLeave={() => {
+      //   const menuTimeout = setTimeout(
+      //       () => {
+      //           handleSetMenu("");
+      //           setMenuOpen(false)
+      //       }, 500)
 
-        return () => clearTimeout(menuTimeout)
-      }}
+      //   return () => clearTimeout(menuTimeout)
+      // }}
     >
       <p className="nav-text-title">{tHeader(navText)}</p> <SlArrowDown />
     </li>
