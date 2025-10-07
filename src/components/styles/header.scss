@@ -2,18 +2,19 @@
 
 header {
     margin: auto;
-    padding: 30px 100px;
+    padding: 15px 100px;
     display: flex;
     justify-content: space-between;
     align-items: center;
     gap: 20px;
-    color: base.$defaultWhite;
+    color: base.$defaultBlack;
 }
 
 nav {
     display: flex;
     justify-content: center;
     flex: 2;
+    font-weight: 600;
     ul {
         display: flex;
         justify-content: space-evenly;
@@ -28,12 +29,6 @@ nav {
             min-width: 100px;
             height: 50px;
 
-            
-            &:hover {
-                color: base.$hoverColor;
-                border-bottom: 2px solid base.$hoverColor;
-            }   
-
             a {
                 color: #000;
                 text-decoration: none;
@@ -45,14 +40,21 @@ nav {
     }
 }
 
-.active-link {
-    color: base.$hoverColor;
-    border-bottom: 2px solid base.$hoverColor;
+.category-menu {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    gap: 10px;
+}
+p:hover {
+    line-height: 26x;
+    cursor: pointer;
+    border-bottom: 1px solid base.$defaultBlack;
 }
 
 .logo{
-    width: 50px;
-    height: 50px;
+    width: 109.2px;
+    height: 91.4px;
 }
 
 .icons {
@@ -61,3 +63,4 @@ nav {
     align-items: center;
     gap: 25px;
 }
+
