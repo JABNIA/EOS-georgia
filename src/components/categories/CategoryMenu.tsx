@@ -1,38 +1,38 @@
-import '../styles/category-menu.scss';
-import Body from './components/Body';
-import Shave from './components/Shave';
-import Lip from './components/Lip';
-import Fragrance from './components/Fragrance';
-import About from './components/About';
-import { useTranslation } from 'react-i18next';
+import "../styles/category-menu.scss";
+import { useTranslation } from "react-i18next";
+import type { ReactNode } from "react";
+import { useDispatch } from "react-redux";
+import { closeMenu, setInMenu } from "../../store/reducers/categoryMenu";
 
-function CategoryMenu({menu} : {menu: string}) {
-  const { t: tCommon } = useTranslation("common")
+function CategoryMenu({
+  children,
+}: {
+  children: ReactNode;
+}) {
+  const { t: tCommon } = useTranslation("common");
+  const dispatch = useDispatch(); 
 
   return (
-  <div className='category-menu-wrapper'
-  >
-    <div>
+    <div
+      className="category-menu-wrapper"
+      onMouseEnter={() => dispatch(setInMenu(true))}
+      onMouseLeave={() => dispatch(closeMenu())}
+    >
+      <div>
         <ul>
-            <li className="category-item">{tCommon("all")}</li>
-            <li className="category-item">{tCommon("new")}</li>
-            <li className="category-item">{tCommon("bestsellers")}</li>
+          <li className="category-item">{tCommon("all")}</li>
+          <li className="category-item">{tCommon("new")}</li>
+          <li className="category-item">{tCommon("bestsellers")}</li>
         </ul>
         <ul>
-            <li className="category-item">{tCommon("exclusives")}</li>
-            <li className="category-item">{tCommon("awardWinners")}</li>
-            <li className="category-item">{tCommon("giftsAndBundles")}</li>
+          <li className="category-item">{tCommon("exclusives")}</li>
+          <li className="category-item">{tCommon("awardWinners")}</li>
+          <li className="category-item">{tCommon("giftsAndBundles")}</li>
         </ul>
+      </div>
+      {children}
     </div>
-    {   menu === "body" && <Body /> }
-    {   menu === "shave" && <Shave /> }
-    {   menu === "lip" && <Lip /> }
-    {   menu === "fragrance" && <Fragrance /> }
-    {   menu === "about" && <About /> }
-    </div>
-  
-    
-  )
+  );
 }
 
-export default CategoryMenu
+export default CategoryMenu;

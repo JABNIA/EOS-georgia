@@ -5,14 +5,18 @@ import { IoCartOutline } from "react-icons/io5";
 import CategoryMenu from "./categories/CategoryMenu";
 import { useState } from "react";
 import ListItem from "./categories/components/ListItem";
+import Body from "./categories/components/Body";
+import Shave from "./categories/components/Shave";
+import Lip from "./categories/components/Lip";
+import Fragrance from "./categories/components/Fragrance";
+import About from "./categories/components/About";
+import { useSelector } from "react-redux";
+import type { RootState } from "../store/store";
 
 function Header() {
-  const [menu, setMenu] = useState("");
-  const [isMenuOpen, setIsMenuOpen] = useState(false);
+  const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
+  const menu = useSelector((state: RootState) => state.CategoryMenu.category);
 
-  const handleSetMenu = (menu: string) => {
-    setMenu(menu);
-  };
 
   return (
     <header>
@@ -20,38 +24,30 @@ function Header() {
       <nav>
         <ul>
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText="body"
           />
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText="shave"
           />
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText="lip"
           />
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText="sale"
           />
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText="fragrance"
           />
           <ListItem
-            handleSetMenu={handleSetMenu}
-            setMenuOpen={setIsMenuOpen}
             navText={"about"}
           />
         </ul>
       </nav>
-      {isMenuOpen && <CategoryMenu menu={menu} />}
+      {menuOpen && menu === "body" && <CategoryMenu><Body /></CategoryMenu>}
+      {menuOpen && menu === "shave" && <CategoryMenu><Shave /></CategoryMenu>}
+      {menuOpen && menu === "lip" && <CategoryMenu><Lip /></CategoryMenu>}
+      {menuOpen && menu === "fragrance" && <CategoryMenu><Fragrance /></CategoryMenu>}
+      {menuOpen && menu === "about" && <CategoryMenu><About /></CategoryMenu>}
       <div className="icons">
         <IoIosSearch size={35} color="#4c4a4a" />
         <PiUserCircleLight size={35} color="#4c4a4a" />

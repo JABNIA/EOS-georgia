@@ -1,42 +1,43 @@
 import { useTranslation } from "react-i18next";
 import { SlArrowDown } from "react-icons/sl";
 import "../../styles/category-menu.scss";
-import type { Dispatch, SetStateAction } from "react";
+import { useDispatch, useSelector } from "react-redux";
+import type { RootState } from "../../../store/store";
+import { closeMenu, openMenu, setCategory, setInMenu } from "../../../store/reducers/categoryMenu";
 
 function ListItem({
-  handleSetMenu,
-  setMenuOpen,
-  navText,
+  navText
 }: {
-  handleSetMenu: (text: string) => void;
-  setMenuOpen: Dispatch<SetStateAction<boolean>>;
   navText: string;
 }) {
   const { t: tHeader } = useTranslation();
+  const menu = useSelector((state: RootState) => state.CategoryMenu.category);
+  const isInMenu = useSelector((state: RootState) => state.CategoryMenu.inMenu);
 
+  const dispatch = useDispatch();
+  
   if (navText === "sale") {
-    return ( 
-    <li className="category-menu">
-      <p className="nav-text-title">{tHeader(navText)}</p> 
-    </li>
- ) 
-}
+    return (
+      <li className="category-menu">
+        <p className="nav-text-title">{tHeader(navText)}</p>
+      </li>
+    );
+  }
   return (
     <li
       className="category-menu"
       onMouseEnter={() => {
-        handleSetMenu(navText)
-        setMenuOpen(true)
-    }}
-      onClick={() => handleSetMenu(navText)}
+        dispatch(openMenu())
+        dispatch(setCategory(navText));
+      }}
       // onMouseLeave={() => {
-      //   const menuTimeout = setTimeout(
-      //       () => {
-      //           handleSetMenu("");
-      //           setMenuOpen(false)
-      //       }, 500)
-
-      //   return () => clearTimeout(menuTimeout)
+      //   const menuTimeout = setTimeout(() => {
+      //     if (!isInMenu) {
+      //       dispatch(closeMenu());
+      //       dispatch(setInMenu(false));
+      //     }
+      //   }, 1000);
+      //   return () => clearTimeout(menuTimeout);
       // }}
     >
       <p className="nav-text-title">{tHeader(navText)}</p> <SlArrowDown />
