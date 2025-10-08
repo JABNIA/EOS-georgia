@@ -3,7 +3,6 @@ import { IoIosSearch } from "react-icons/io";
 import { PiUserCircleLight } from "react-icons/pi";
 import { IoCartOutline } from "react-icons/io5";
 import CategoryMenu from "./categories/CategoryMenu";
-import { useState } from "react";
 import ListItem from "./categories/components/ListItem";
 import Body from "./categories/components/Body";
 import Shave from "./categories/components/Shave";

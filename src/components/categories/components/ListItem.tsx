@@ -3,7 +3,7 @@ import { SlArrowDown } from "react-icons/sl";
 import "../../styles/category-menu.scss";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../store/store";
-import { closeMenu, openMenu, setCategory, setInMenu } from "../../../store/reducers/categoryMenu";
+import { openMenu, setCategory } from "../../../store/reducers/categoryMenu";
 
 function ListItem({
   navText
@@ -15,7 +15,7 @@ function ListItem({
   const isInMenu = useSelector((state: RootState) => state.CategoryMenu.inMenu);
 
   const dispatch = useDispatch();
-  
+  console.log(menu, isInMenu)
   if (navText === "sale") {
     return (
       <li className="category-menu">
