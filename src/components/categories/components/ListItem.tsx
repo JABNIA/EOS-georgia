@@ -40,7 +40,7 @@ function ListItem({
       //   return () => clearTimeout(menuTimeout);
       // }}
     >
-      <p className="nav-text-title">{tHeader(navText)}</p> <SlArrowDown />
+      <p className="nav-text-title nav-item">{tHeader(navText)}</p> <SlArrowDown />
     </li>
   );
 }

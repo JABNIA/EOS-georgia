@@ -46,7 +46,7 @@ nav {
     align-items: center;
     gap: 10px;
 }
-p:hover {
+.nav-item:hover {
     line-height: 26x;
     cursor: pointer;
     border-bottom: 1px solid base.$defaultBlack;

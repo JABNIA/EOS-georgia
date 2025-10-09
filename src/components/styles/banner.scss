@@ -1,0 +1,31 @@
+.banner {
+    display: flex;
+    overflow-x: auto;
+    width: 100%;
+    min-height: 831px;
+    background-color: #f0f0f0;
+    scroll-behavior: smooth;
+}
+
+.banner-image {
+    width: auto;
+    height: 831px;
+    object-fit: cover;
+}
+
+.switch-wrapper{
+    position: absolute;
+    bottom: 20px;
+    left: 50%;
+    transform: translateX(-50%);
+    display: flex;
+    gap: 10px;
+}
+
+.switch-point {
+    width: 20px;
+    height: 20px;
+    border-radius: 50%;
+    background-color: #f0f0f0;
+    box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
+}

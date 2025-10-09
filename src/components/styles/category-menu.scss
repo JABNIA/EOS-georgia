@@ -12,6 +12,8 @@
     gap: 200px;
     background-color: base.$defaultWhite;
     animation: open 0.7s ease;
+    border-top: 2px solid base.$defaultPink;
+    border-bottom: 2px solid base.$defaultPink;
 
     ul {
             display: block;

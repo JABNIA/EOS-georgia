@@ -3,7 +3,50 @@
 
 footer {
     width: 100%;
-    height: 300px;
-    background-color: base.$bgColorFooter;
+    height: auto;
+    padding: 30px 100px;
+    background-color: base.$defaultPink;
+    color: base.$defaultWhite;
 }
 
+.footer-title{
+    font-size: 144px;
+    font-weight: bold;
+    margin: 30px auto;
+    font-family:Verdana, Geneva, Tahoma, sans-serif;
+    text-align: center;
+}
+
+.footer-socials{
+    margin: 30px;
+    display: flex;
+    justify-content: flex-start;
+    align-items: center;
+    gap: 10px;
+    list-style: none;
+}
+
+.footer-navigation{
+    width: 30%;
+    margin: 30px;
+    display: flex;
+    justify-content: space-between;
+    align-items: flex-start;
+    gap: 30px;
+
+    .footer-nav-section, ul{
+        flex-grow: 0;
+        flex-shrink: 0;
+        padding: 0;
+        list-style: none;
+    }
+
+    .footer-nav-item{
+        margin: 8px 0;
+        cursor: pointer;
+
+        &:hover{
+            text-decoration: underline;
+        }
+    }
+}

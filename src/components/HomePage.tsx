@@ -1,9 +1,9 @@
+import Banner from "./banner/Banner"
+
 function HomePage() {
   return (
-    <div style={{
-      height: "400px"
-    }}>
-      აქა იქნება პროდუქცია
+    <div>
+      <Banner />
     </div>
   )
 }
