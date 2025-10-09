@@ -5,6 +5,7 @@
     min-height: 831px;
     background-color: #f0f0f0;
     scroll-behavior: smooth;
+    scrollbar-width: none;
 }
 
 .banner-image {
@@ -19,13 +20,29 @@
     left: 50%;
     transform: translateX(-50%);
     display: flex;
+    align-items: center;
     gap: 10px;
 }
 
 .switch-point {
-    width: 20px;
-    height: 20px;
+    width: 15px;
+    height: 15px;
     border-radius: 50%;
-    background-color: #f0f0f0;
+    background-color: #f0f0f077;
     box-shadow: 2px 2px 5px rgba(255, 255, 255, 0.3);
 }
+
+.switch-point:hover {
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+    cursor: pointer;
+    transition: width 0.3s, height 0.3s, background-color 0.3s;
+}
+
+.here {
+    width: 20px;
+    height: 20px;
+    background-color: #f0f0f0;
+}
+
