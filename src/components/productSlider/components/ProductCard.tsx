@@ -1,5 +1,3 @@
-import React from 'react'
-
 function ProductCard({imgLink}: {imgLink: string}) {
   return (
     <div className='card-wrapper'>
