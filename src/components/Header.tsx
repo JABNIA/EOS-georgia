@@ -7,46 +7,47 @@ import ListItem from "./categories/components/ListItem";
 import Body from "./categories/components/Body";
 import Shave from "./categories/components/Shave";
 import Lip from "./categories/components/Lip";
-import Fragrance from "./categories/components/Fragrance";
-import About from "./categories/components/About";
 import { useSelector } from "react-redux";
 import type { RootState } from "../store/store";
+import { NavLink } from "react-router";
+import { useTranslation } from "react-i18next";
 
 function Header() {
   const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
   const menu = useSelector((state: RootState) => state.CategoryMenu.category);
-
+  const { t: tCommon } = useTranslation("common");
 
   return (
     <header>
       <img src="./assets/logo.png" alt="EOS logo here" className="logo" />
       <nav>
         <ul>
+          <NavLink to="/sale" className={"nav-text-title"}>
+            {tCommon("allProducts")}
+          </NavLink>
           <ListItem
-            navText="body"
+            navText="bodyCare"
           />
           <ListItem
             navText="shave"
           />
           <ListItem
-            navText="lip"
+            navText="lipCare"
           />
-          <ListItem
-            navText="sale"
-          />
-          <ListItem
-            navText="fragrance"
-          />
-          <ListItem
-            navText={"about"}
-          />
+          <NavLink to="/sale" className={"nav-text-title"}>
+            {tCommon("gifts")}
+          </NavLink>
+          <NavLink to="/sale" className={"nav-text-title"}>
+            {tCommon("blog")}
+          </NavLink>
+          <NavLink to="/sale" className={"nav-text-title"}>
+            {tCommon("about")}
+          </NavLink>
         </ul>
       </nav>
-      {menuOpen && menu === "body" && <CategoryMenu><Body /></CategoryMenu>}
+      {menuOpen && menu === "bodyCare" && <CategoryMenu><Body /></CategoryMenu>}
       {menuOpen && menu === "shave" && <CategoryMenu><Shave /></CategoryMenu>}
-      {menuOpen && menu === "lip" && <CategoryMenu><Lip /></CategoryMenu>}
-      {menuOpen && menu === "fragrance" && <CategoryMenu><Fragrance /></CategoryMenu>}
-      {menuOpen && menu === "about" && <CategoryMenu><About /></CategoryMenu>}
+      {menuOpen && menu === "lipCare" && <CategoryMenu><Lip /></CategoryMenu>}
       <div className="icons">
         <IoIosSearch size={35} color="#4c4a4a" />
         <PiUserCircleLight size={35} color="#4c4a4a" />

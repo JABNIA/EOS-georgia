@@ -5,10 +5,11 @@
   "exclusives": "Exclusives",
   "awardWinners": "Award winners",
   "giftsAndBundles": "Gifts & Bundles",
-  "body" : "body",
-  "shave" : "shave",
-  "lip" : "lip",
-  "sale" : "sale",
-  "fragrance" : "fragrance",
-  "abut" : "about"
+  "allProducts": "All Products",
+  "bodyCare": "Body Care",
+  "shave": "Shave",
+  "lipCare": "Lip Care",
+  "gifts": "Gifts",
+  "blog": "Blog",
+  "about": "About Us"
 }

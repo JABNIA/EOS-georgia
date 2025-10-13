@@ -9,11 +9,12 @@ function Body() {
   return (
     <div>
       <ul>
-        <li className="category-item">{t("allBody")}</li>
         <li className="category-item">{t("bodyLotion")}</li>
         <li className="category-item">{t("bodyWash")}</li>
-        <li className="category-item">{t("vanillaCashmere")}</li>
-        <li className="category-item">{t("handCare")}</li>
+        <li className="category-item">{t("handCreme")}</li>
+        <li className="category-item">{t("bodyButter")}</li>
+        <li className="category-item">{t("bodyOil")}</li>
+        <li className="category-item">{t("bodyMist")}</li>
       </ul>
     </div>
   );

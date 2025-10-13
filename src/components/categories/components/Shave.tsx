@@ -5,10 +5,9 @@ function Shave() {
   return (
     <div>
         <ul>
-            <li className="category-item">{t("allShave")}</li>
             <li className="category-item">{t("shaveOil")}</li>
             <li className="category-item">{t("shaveCream")}</li>
-            <li className="category-item">{t("cashmereSkin")}</li>
+            <li className="category-item">{t("bodyScrub")}</li>
         </ul>
 
     </div>

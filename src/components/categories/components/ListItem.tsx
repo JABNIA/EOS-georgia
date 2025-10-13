@@ -10,7 +10,7 @@ function ListItem({
 }: {
   navText: string;
 }) {
-  const { t: tHeader } = useTranslation();
+  const { t: tHeader } = useTranslation("common");
   const menu = useSelector((state: RootState) => state.CategoryMenu.category);
   const isInMenu = useSelector((state: RootState) => state.CategoryMenu.inMenu);
 
@@ -30,15 +30,6 @@ function ListItem({
         dispatch(openMenu())
         dispatch(setCategory(navText));
       }}
-      // onMouseLeave={() => {
-      //   const menuTimeout = setTimeout(() => {
-      //     if (!isInMenu) {
-      //       dispatch(closeMenu());
-      //       dispatch(setInMenu(false));
-      //     }
-      //   }, 1000);
-      //   return () => clearTimeout(menuTimeout);
-      // }}
     >
       <p className="nav-text-title nav-item">{tHeader(navText)}</p> <SlArrowDown />
     </li>

@@ -3,6 +3,7 @@ import { Route, Routes, BrowserRouter } from 'react-router'
 import Layout from './components/Layout'
 import HomePage from './components/HomePage';
 import "./i18n.ts"
+import Product from './components/pages/productPage/Product.tsx';
 
 function App() {
 
@@ -15,10 +16,7 @@ function App() {
         <Routes>
           <Route path="/" element={<Layout />}>
             <Route index element={<HomePage />} />
-            <Route path="/about" element={<h2>About Us</h2>} />
-            <Route path="/products" element={<h2>Our Products</h2>} />
-            <Route path="/contact" element={<h2>Contact Us</h2>} />
-            <Route path="/find-us" element={<h2>Find Us</h2>} />
+            <Route path="/Product" element={<Product />} />
           </Route>
         </Routes>
     </BrowserRouter>

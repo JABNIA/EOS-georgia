@@ -1,53 +1,59 @@
 @use "../../_variables.scss" as base;
 
-.category-menu-wrapper{
-    position: absolute;
-    top:121.4px;
-    left: 0;
-    height: 500px;
-    width: 100%;
-    padding: 32px 100px;
-    display: flex;
+.category-menu-wrapper {
+  position: absolute;
+  top: 121.4px;
+  left: 0;
+  height: 500px;
+  width: 100%;
+  padding: 32px 100px;
+  display: flex;
+  justify-content: flex-start;
+  gap: 200px;
+  background-color: base.$defaultWhite;
+  animation: open 0.7s ease;
+  border-top: 2px solid base.$defaultPink;
+  border-bottom: 2px solid base.$defaultPink;
+
+  ul {
+    display: block;
+    text-align: left;
+  }
+
+  li {
+    height: 35px;
     justify-content: flex-start;
-    gap: 200px;
-    background-color: base.$defaultWhite;
-    animation: open 0.7s ease;
-    border-top: 2px solid base.$defaultPink;
-    border-bottom: 2px solid base.$defaultPink;
+    flex-shrink: 0;
+    list-style: none;
+  }
 
-    ul {
-            display: block;
-            text-align: left;
-        }
-
-    li {
-        height: 35px;
-        justify-content: flex-start;
-        flex-shrink: 0;
-        list-style: none;
-    }
-
-    li:hover {
-        border-bottom: 1px solid base.$defaultBlack;
-    }
-
-    .category-menu {
-        display: block;
-    }
+  li:hover {
+    border-bottom: 1px solid base.$defaultBlack;
+  }
 }
 
-.nav-text-title{
-    text-transform: uppercase;
+.category-menu {
+  min-width: 100px;
+  display: flex;
+  justify-content: flex-start;
+  align-items: center;
+  gap: 10px;
 }
 
+.nav-text-title {
+  text-decoration: none;
+  text-transform: uppercase;
+  font-size: 14px;
+  color: base.$defaultBlack;
+}
 
 @keyframes open {
-    0% {
-        height: 0px;
-        color: base.$defaultWhite;
-    }
-    100% {
-        height: 500px;
-        color: base.$defaultWhite;
-    }
+  0% {
+    height: 0px;
+    color: transparent;
+  }
+  100% {
+    height: 500px;
+    color: transparent;
+  }
 }
