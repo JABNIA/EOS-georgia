@@ -1,8 +1,126 @@
+@use './_variables' as base;
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-Bold.woff') format('woff2'),
+        url('./assets/fonts/HostGrotesk-Bold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('HostGrotesk-ExtraBold.woff2') format('woff2'),
+        url('HostGrotesk-ExtraBold.woff') format('woff');
+    font-weight: bold;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-Italic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-Italic.woff') format('woff');
+    font-weight: normal;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-BoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-BoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-ExtraBoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-ExtraBoldItalic.woff') format('woff');
+    font-weight: bold;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-MediumItalic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-MediumItalic.woff') format('woff');
+    font-weight: 500;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-LightItalic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-LightItalic.woff') format('woff');
+    font-weight: 300;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-Light.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-Light.woff') format('woff');
+    font-weight: 300;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-Medium.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-Medium.woff') format('woff');
+    font-weight: 500;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-Regular.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-Regular.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-SemiBold.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-SemiBold.woff') format('woff');
+    font-weight: 600;
+    font-style: normal;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Host Grotesk';
+    src: url('./assets/fonts/HostGrotesk-SemiBoldItalic.woff2') format('woff2'),
+        url('./assets/fonts/HostGrotesk-SemiBoldItalic.woff') format('woff');
+    font-weight: 600;
+    font-style: italic;
+    font-display: swap;
+}
+
+@font-face {
+    font-family: 'Franxurter';
+    src: url('./assets/fonts/Franxurter.woff2') format('woff2'),
+        url('./assets/fonts/Franxurter.woff') format('woff');
+    font-weight: normal;
+    font-style: normal;
+    font-display: swap;
+}
 
 
 * {
   margin: 0;
   padding: 0;
   box-sizing: border-box;
-  font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+  font-family: base.$defaultFonts;
 }
