@@ -16,6 +16,12 @@ function Header() {
   const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
   const menu = useSelector((state: RootState) => state.CategoryMenu.category);
   const { t: tCommon } = useTranslation("common");
+  const { i18n } = useTranslation();
+
+
+  const handleLangChange = (lang: string) => {
+    i18n.changeLanguage(lang);
+  }
 
   return (
     <header>
@@ -48,6 +54,14 @@ function Header() {
       {menuOpen && menu === "bodyCare" && <CategoryMenu><Body /></CategoryMenu>}
       {menuOpen && menu === "shave" && <CategoryMenu><Shave /></CategoryMenu>}
       {menuOpen && menu === "lipCare" && <CategoryMenu><Lip /></CategoryMenu>}
+      <div>
+        <form>
+          <select className="lang-select" name="lang" id="">
+            <option value="ka" onClick={() => handleLangChange("ka")}>🇬🇪 ქართ.</option>
+            <option value="en" onClick={() => handleLangChange("en")}>🇬🇧 ENG.</option>
+          </select>
+        </form>
+      </div>
       <div className="icons">
         <IoIosSearch size={35} color="#4c4a4a" />
         <PiUserCircleLight size={35} color="#4c4a4a" />

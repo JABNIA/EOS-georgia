@@ -36,6 +36,26 @@
     overflow: hidden;
 }
 
+.suggested {
+    height: 500px;
+    margin: 50px;
+    display: flex;
+    align-items: flex-start;
+    justify-content: flex-start;
+    gap: 20px;
+    overflow-y: hidden;
+    overflow-x: auto;
+    scrollbar-width: none;
+    --webkit-scrollbar: {
+        display: none;
+    }
+}
+
+.suggested-card-img {
+    width: 300px;
+    height: auto;
+    object-fit: cover;
+}
 
 @keyframes Open {
     0% {
