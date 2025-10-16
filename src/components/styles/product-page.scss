@@ -1,3 +1,5 @@
+@use "../../_variables" as base;
+
 .product-wrapper {
     width: 100%;
     min-height: 700px;
@@ -37,7 +39,7 @@
 }
 
 .suggested {
-    height: 500px;
+    height: auto;
     margin: 50px;
     display: flex;
     align-items: flex-start;
@@ -46,6 +48,7 @@
     overflow-y: hidden;
     overflow-x: auto;
     scrollbar-width: none;
+    scroll-behavior: smooth;
     --webkit-scrollbar: {
         display: none;
     }
@@ -55,6 +58,33 @@
     width: 300px;
     height: auto;
     object-fit: cover;
+}
+.suggested-wrapper {
+    position: relative;
+}
+
+.suggested-scroll {
+    position: absolute;
+    width: 100px;
+    height: 100%;
+    border: none;
+    border-radius: 0;
+    background-color: transparent;
+    color: transparent;
+}
+
+.suggested-scroll:hover {
+    background-color: #4e4d4d6c;;
+    cursor: pointer;
+    color: base.$defaultWhite;
+}
+
+.back {
+    left: 0;
+}
+
+.forward {
+    right: 0;
 }
 
 @keyframes Open {
