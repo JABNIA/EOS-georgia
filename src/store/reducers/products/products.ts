@@ -1,5 +1,4 @@
-import { createSlice, createAsyncThunk } from "@reduxjs/toolkit";
-import { supabase } from "../../../supabase";
+import { createSlice } from "@reduxjs/toolkit";
 import type { Product } from "../../../types/products-type";
 
 
@@ -8,16 +7,6 @@ interface ProductsInterface {
     status: "idle" | "loading" | "succeeded" | "failed" ;
     error: string | null
 }
-
-const fetchProductData = createAsyncThunk(
-    "products/fetchProductData",
-    async (_, thunkAPI) => {
-        const products = await supabase.from("Products").select()
-        return products.data
-    }
-)
-
-
 
 const initialState: ProductsInterface = {
     products: [],
