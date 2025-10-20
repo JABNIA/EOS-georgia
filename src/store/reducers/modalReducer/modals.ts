@@ -5,7 +5,7 @@ interface modalsInterface {
     type: string,
 }
 
-const initialState = {
+const initialState: modalsInterface = {
     isOpen: true,
     type: ""
 }

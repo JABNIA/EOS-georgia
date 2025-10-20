@@ -29,7 +29,7 @@ const productsSlice = createSlice({
             state.products = [];
             state.error = action.payload;
         },
-        deleteProductsTodo: (state, action) => {
+        deleteProductsTodo: (state, _action) => {
             state.status = "loading"
         },
         deleteProductsSuccess: (state, action) => {
@@ -41,7 +41,7 @@ const productsSlice = createSlice({
             state.error = action.payload;
             state.products = [];
         },
-        updateProductsTodo: (state, action) => {
+        updateProductsTodo: (state, _action) => {
             state.status = "loading"
         },
         updateProductsSuccess: (state, action) => {
