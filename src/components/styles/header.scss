@@ -35,8 +35,8 @@ nav {
         font-size: 16px;
         color: base.$defaultBlack;
     }
-    
-    option:hover{
+
+    option:hover {
         cursor: pointer;
     }
 }
@@ -47,7 +47,7 @@ nav {
     border-bottom: 1px solid base.$defaultBlack;
 }
 
-.logo{
+.logo {
     width: 109.2px;
     height: 91.4px;
 }
@@ -58,4 +58,3 @@ nav {
     align-items: center;
     gap: 25px;
 }
-

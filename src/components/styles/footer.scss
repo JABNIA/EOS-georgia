@@ -1,6 +1,5 @@
 @use "../../_variables.scss" as base;
 
-
 footer {
     width: 100%;
     height: auto;
@@ -9,7 +8,7 @@ footer {
     color: base.$defaultWhite;
 }
 
-.footer-title{
+.footer-title {
     font-size: 144px;
     font-weight: bold;
     margin: 30px auto;
@@ -17,7 +16,7 @@ footer {
     text-align: center;
 }
 
-.footer-socials{
+.footer-socials {
     margin: 30px;
     display: flex;
     justify-content: flex-start;
@@ -26,7 +25,7 @@ footer {
     list-style: none;
 }
 
-.footer-navigation{
+.footer-navigation {
     width: 30%;
     margin: 30px;
     display: flex;
@@ -34,18 +33,19 @@ footer {
     align-items: flex-start;
     gap: 30px;
 
-    .footer-nav-section, ul{
+    .footer-nav-section,
+    ul {
         flex-grow: 0;
         flex-shrink: 0;
         padding: 0;
         list-style: none;
     }
 
-    .footer-nav-item{
+    .footer-nav-item {
         margin: 8px 0;
         cursor: pointer;
 
-        &:hover{
+        &:hover {
             text-decoration: underline;
         }
     }

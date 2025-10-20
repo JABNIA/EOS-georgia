@@ -13,62 +13,77 @@ import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-  const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
-  const menu = useSelector((state: RootState) => state.CategoryMenu.category);
-  const { t: tCommon } = useTranslation("common");
-  const { i18n } = useTranslation();
+    const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
+    const menu = useSelector((state: RootState) => state.CategoryMenu.category);
+    const { t: tCommon } = useTranslation("common");
+    const { i18n } = useTranslation();
 
+    const handleLangChange = (lang: string) => {
+        i18n.changeLanguage(lang);
+    };
 
-  const handleLangChange = (lang: string) => {
-    i18n.changeLanguage(lang);
-  }
-
-  return (
-    <header>
-      <img src="./assets/logo.png" alt="EOS logo here" className="logo" />
-      <nav>
-        <ul>
-          <NavLink to="/sale" className={"nav-text-title"}>
-            {tCommon("allProducts")}
-          </NavLink>
-          <ListItem
-            navText="bodyCare"
-          />
-          <ListItem
-            navText="shave"
-          />
-          <ListItem
-            navText="lipCare"
-          />
-          <NavLink to="/sale" className={"nav-text-title"}>
-            {tCommon("gifts")}
-          </NavLink>
-          <NavLink to="/sale" className={"nav-text-title"}>
-            {tCommon("blog")}
-          </NavLink>
-          <NavLink to="/sale" className={"nav-text-title"}>
-            {tCommon("about")}
-          </NavLink>
-        </ul>
-      </nav>
-      {menuOpen && menu === "bodyCare" && <CategoryMenu><Body /></CategoryMenu>}
-      {menuOpen && menu === "shave" && <CategoryMenu><Shave /></CategoryMenu>}
-      {menuOpen && menu === "lipCare" && <CategoryMenu><Lip /></CategoryMenu>}
-      <div>
-        <form>
-          <select className="lang-select" name="lang" id="">
-            <option value="ka" onClick={() => handleLangChange("ka")}>🇬🇪 ქართ.</option>
-            <option value="en" onClick={() => handleLangChange("en")}>🇬🇧 ENG.</option>
-          </select>
-        </form>
-      </div>
-      <div className="icons">
-        <IoIosSearch size={35} color="#4c4a4a" />
-        <PiUserCircleLight size={35} color="#4c4a4a" />
-        <IoCartOutline size={35} color="#4c4a4a" />
-      </div>
-    </header>
-  );
+    return (
+        <header>
+            <img src="./assets/logo.png" alt="EOS logo here" className="logo" />
+            <nav>
+                <ul>
+                    <NavLink to="/sale" className={"nav-text-title"}>
+                        {tCommon("allProducts")}
+                    </NavLink>
+                    <ListItem navText="bodyCare" />
+                    <ListItem navText="shave" />
+                    <ListItem navText="lipCare" />
+                    <NavLink to="/sale" className={"nav-text-title"}>
+                        {tCommon("gifts")}
+                    </NavLink>
+                    <NavLink to="/sale" className={"nav-text-title"}>
+                        {tCommon("blog")}
+                    </NavLink>
+                    <NavLink to="/sale" className={"nav-text-title"}>
+                        {tCommon("about")}
+                    </NavLink>
+                </ul>
+            </nav>
+            {menuOpen && menu === "bodyCare" && (
+                <CategoryMenu>
+                    <Body />
+                </CategoryMenu>
+            )}
+            {menuOpen && menu === "shave" && (
+                <CategoryMenu>
+                    <Shave />
+                </CategoryMenu>
+            )}
+            {menuOpen && menu === "lipCare" && (
+                <CategoryMenu>
+                    <Lip />
+                </CategoryMenu>
+            )}
+            <div>
+                <form>
+                    <select className="lang-select" name="lang" id="">
+                        <option
+                            value="ka"
+                            onClick={() => handleLangChange("ka")}
+                        >
+                            🇬🇪 ქართ.
+                        </option>
+                        <option
+                            value="en"
+                            onClick={() => handleLangChange("en")}
+                        >
+                            🇬🇧 ENG.
+                        </option>
+                    </select>
+                </form>
+            </div>
+            <div className="icons">
+                <IoIosSearch size={35} color="#4c4a4a" />
+                <PiUserCircleLight size={35} color="#4c4a4a" />
+                <IoCartOutline size={35} color="#4c4a4a" />
+            </div>
+        </header>
+    );
 }
 
 export default Header;

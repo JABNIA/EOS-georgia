@@ -9,24 +9,27 @@ import AddProduct from "./components/pages/admin/pages/addProduct/AddProduct.tsx
 import ManageProducts from "./components/pages/admin/pages/manage-products/ManageProducts.tsx";
 
 function App() {
-  useEffect(() => {}, []);
+    useEffect(() => {}, []);
 
-  return (
-    <BrowserRouter>
-      <Routes>
-        <Route path="/" element={<Layout />}>
-          <Route index element={<HomePage />} />
-          <Route path="/Product" element={<Product />} />
-        </Route>
-        <Route path="/admin" >
-          <Route path="/admin" element={<Admin />} >
-            <Route path="add-product" element={<AddProduct />} />
-            <Route path="manage-products" element={<ManageProducts />} />
-          </Route>
-        </Route>
-      </Routes>
-    </BrowserRouter>
-  );
+    return (
+        <BrowserRouter>
+            <Routes>
+                <Route path="/" element={<Layout />}>
+                    <Route index element={<HomePage />} />
+                    <Route path="/Product" element={<Product />} />
+                </Route>
+                <Route path="/admin">
+                    <Route path="/admin" element={<Admin />}>
+                        <Route path="add-product" element={<AddProduct />} />
+                        <Route
+                            path="manage-products"
+                            element={<ManageProducts />}
+                        />
+                    </Route>
+                </Route>
+            </Routes>
+        </BrowserRouter>
+    );
 }
 
 export default App;

@@ -1,11 +1,11 @@
 import AdminForm from "../../Components/AdminForm";
 
 function AddProduct() {
-  return (
-    <>
-      <AdminForm />
-    </>
-  );
+    return (
+        <>
+            <AdminForm />
+        </>
+    );
 }
 
 export default AddProduct;
