@@ -1,6 +1,6 @@
 import { useDispatch, useSelector } from "react-redux";
 import { ModalCollection } from "../../ModalNames";
-import AdminEditModal from "./AdminEditModal";
+import AdminEditModal from "./adminEdit/AdminEditModal";
 import type { RootState } from "../../store/store";
 import "../styles/modalStyles.scss"
 import { closeModal } from "../../store/reducers/modalReducer/modals";
@@ -27,9 +27,13 @@ function MainModal() {
     return <div className="modal-wrapper"
         onClick={handleCloseModal}
     >
+        <div className="modal-container" onClick={(e) => e.stopPropagation() }>
+
         {
             whichModal()
         }
+        </div>
+
         </div>;
 }
 

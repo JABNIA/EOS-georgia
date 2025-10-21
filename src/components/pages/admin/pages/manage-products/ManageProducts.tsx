@@ -8,6 +8,8 @@ import {
 import MainModal from "../../../../modals/MainModal";
 import { openModal, setModalType } from "../../../../../store/reducers/modalReducer/modals";
 import { ModalCollection } from "../../../../../ModalNames";
+import { setSelectedProduct } from "../../../../../store/reducers/products/selectedProduct";
+import type { Product } from "../../../../../types/products-type";
 
 function ManageProducts() {
     const products = useSelector((state: RootState) => state.Products.products);
@@ -21,9 +23,11 @@ function ManageProducts() {
         dispatch(deleteProductsTodo({id: id}));
     };
 
-    const handleEdit = () => {
+    const handleEdit = (product: Product) => {
         dispatch(setModalType(ModalCollection.adminEditProduct))
         dispatch(openModal())
+        dispatch(setSelectedProduct(product))
+        console.log(product)
     }
 
     return (
@@ -65,7 +69,7 @@ function ManageProducts() {
                                         delete
                                     </button>
                                     <button className="product-button"
-                                        onClick={handleEdit}
+                                        onClick={() => handleEdit(e)}
                                     >
                                         edit
                                     </button>

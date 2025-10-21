@@ -52,7 +52,7 @@ const productsSlice = createSlice({
             state.status = "failed";
             state.products = [];
             state.error = action.payload;
-        } 
+        },
     },
 });
 

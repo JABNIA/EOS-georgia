@@ -49,11 +49,11 @@ export function* updateProduct(action: PayloadAction<Product>){
     const updatedProduct = action.payload
 
     try {
-        const { updateError } = yield call(() => supabase.from("Products").update({}).eq("id", updatedProduct.id))
+        const { updateError } = yield call(() => supabase.from("Products").update({...updatedProduct}).eq("id", updatedProduct.id))
     
         if (updateError) throw updateError;
 
-        const { data, error } = yield supabase.from("Products").select()
+        const { data, error } = yield supabase.from("Products").select().order("id", {ascending: true})
 
         if (error) throw error
         yield put(updateProductsSuccess(data));

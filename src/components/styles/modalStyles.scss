@@ -6,6 +6,52 @@
     left: 0;
     width: 100%;
     height: 100%;
-    background-color: #000000ad;
-    padding: 5% 25% ;
+    background-color: #000000ad;    
+    display: flex;
+    justify-content: center;
+    align-items: center;
+}
+
+.form-wrapper{
+    justify-content: flex-start;
+    align-items: flex-start;
+    text-transform: capitalize;
+    gap: 24px;
+}
+
+.modal-container{
+    height: auto;
+    width: 40%;
+    padding: 32px;
+    background-color: base.$defaultWhite;
+    border-radius: 15px;
+}
+
+.admin-button-wrapper {
+    width: 100%;
+    margin-top: 40px;
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    gap: 30px;
+}
+
+.admin-edit-button {
+    width: 150px;
+    height: 45px;
+    display: block;
+    font-size: 18px;
+    border-radius: 8px;
+    cursor: pointer;
+}
+
+.cancel {
+    background-color: base.$defaultWhite;
+    border: 1px solid base.$defaultPink;
+    color: base.$defaultPink;
+}
+
+.save {    
+    background-color: base.$defaultPink;
+    color: base.$defaultWhite;
 }

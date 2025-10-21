@@ -3,6 +3,7 @@ import CategoryMenuReducer from "./reducers/categoryMenu/index";
 import BannerReducer from "./reducers/banner/index";
 import ProductSlice from "./reducers/products/products";
 import ModalSlice from "./reducers/modalReducer/modals";
+import SelectedProductSlice from "./reducers/products/selectedProduct";
 import createSagaMiddleware from "redux-saga";
 import rootSaga from "./SAGA/RootSAGA";
 
@@ -14,6 +15,7 @@ export const appStore = configureStore({
         Banner: BannerReducer,
         Products: ProductSlice,
         Modal: ModalSlice,
+        SelectedProduct: SelectedProductSlice,
     },
     middleware: (getDefaultmiddleware) =>
         getDefaultmiddleware({ thunk: false }).concat(sagaMiddleware),
