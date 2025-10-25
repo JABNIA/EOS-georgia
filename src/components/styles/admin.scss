@@ -93,6 +93,7 @@ form {
     width: 100%;
     border: 1px solid base.$defaultBlack;
     border-collapse: collapse;
+    overflow: auto;
 }
 
 .products-item {
@@ -100,6 +101,7 @@ form {
 }
 
 .product-data {
+    width: 300px;
     padding: 0 10px;
     border: 1px solid base.$defaultBlack;
     text-align: center;

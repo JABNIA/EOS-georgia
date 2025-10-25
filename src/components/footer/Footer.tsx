@@ -5,7 +5,7 @@ import Socials from "./components/Socials";
 function Footer() {
     return (
         <footer>
-            <p className="footer-title">Evolution Of Smooth</p>
+            <p className="footer-title">Stay smooth</p>
             <Socials />
             <Navigation />
         </footer>

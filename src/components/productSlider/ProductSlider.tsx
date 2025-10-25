@@ -10,9 +10,9 @@ function ProductSlider() {
         <div className="product-slider-container">
             {products.map((product) => { return (
                 product.images ? 
-                <ProductCard imgLink={product.images[0]} />
+                <ProductCard imgLink={product.images[0]} product={product}/>
                 : 
-                <ProductCard imgLink={null} />
+                <ProductCard imgLink={null} product={product}/>
             )})}
         </div>
     );

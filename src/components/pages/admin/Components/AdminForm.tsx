@@ -77,7 +77,7 @@ function AdminForm() {
                     id: products[products.length - 1].id + 1,
                 } as Product);
                 break;
-            case "ingreasddients":
+            case "ingredients":
                 setProduct({
                     ...product,
                     ingredients: e.target.value,

@@ -7,5 +7,6 @@ export interface Product {
   ingredients: string;
   benefits: string;
   howToUse: string;
+  sale: boolean;
   images: string[];
 }
