@@ -2,7 +2,6 @@ import { FaFacebook } from "react-icons/fa";
 import { FaInstagramSquare } from "react-icons/fa";
 import { FaTiktok } from "react-icons/fa6";
 import { FaSquareThreads } from "react-icons/fa6";
-import { FaPinterestSquare } from "react-icons/fa";
 import { FaYoutubeSquare } from "react-icons/fa";
 
 function socials() {
