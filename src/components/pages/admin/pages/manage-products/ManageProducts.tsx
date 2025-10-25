@@ -31,7 +31,7 @@ function ManageProducts() {
     }
 
     return (
-        <div>
+        <>
             <table className="product-table">
                 <thead>
                     <tr className="products-item">
@@ -53,14 +53,14 @@ function ManageProducts() {
                                 <td className="product-data">{e.name}</td>
                                 <td className="product-data">{e.price}</td>
                                 <td className="product-data">
-                                    {e.description}
+                                    {e.description.substring(0, 50)}
                                 </td>
                                 <td className="product-data">
-                                    {e.ingredients}
+                                    {e.ingredients.substring(0, 50)}
                                 </td>
-                                <td className="product-data">{e.benefits}</td>
-                                <td className="product-data">{e.whatItIs}</td>
-                                <td className="product-data">{e.howToUse}</td>
+                                <td className="product-data">{e.benefits.substring(0, 50)}</td>
+                                <td className="product-data">{e.whatItIs.substring(0, 50)}</td>
+                                <td className="product-data">{e.howToUse.substring(0, 50)}</td>
                                 <td>
                                     <button
                                         className="product-button"
@@ -80,7 +80,8 @@ function ManageProducts() {
                 </tbody>
             </table>
             { modal && <MainModal /> }
-        </div>
+        </>
+
     );
 }
 

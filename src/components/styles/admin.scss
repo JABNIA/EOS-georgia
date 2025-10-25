@@ -1,7 +1,6 @@
 @use "../../variables" as base;
 
 .admin-wrapper {
-    width: 80vw;
     margin: auto;
     padding: 32px;
     background-color: #f9f9f9;
@@ -90,7 +89,6 @@ form {
 }
 
 .product-table {
-    width: 100%;
     border: 1px solid base.$defaultBlack;
     border-collapse: collapse;
     overflow: auto;
@@ -113,5 +111,4 @@ form {
     color: base.$defaultBlack;
     padding: 0;
     border-radius: 0;
-
 }

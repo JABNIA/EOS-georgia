@@ -22,22 +22,12 @@ function Banner() {
             <div className="banner">
                 <img
                     className="banner-image"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNKjmcSo2y3zYe9CQSDczG9iGOVljb6oP5Q&s"
+                    src="./assets/images/banner1.webp"
                     alt=""
                 />
                 <img
                     className="banner-image"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNKjmcSo2y3zYe9CQSDczG9iGOVljb6oP5Q&s"
-                    alt=""
-                />
-                <img
-                    className="banner-image"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNKjmcSo2y3zYe9CQSDczG9iGOVljb6oP5Q&s"
-                    alt=""
-                />
-                <img
-                    className="banner-image"
-                    src="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcSCNKjmcSo2y3zYe9CQSDczG9iGOVljb6oP5Q&s"
+                    src="./assets/images/banner2.webp"
                     alt=""
                 />
             </div>

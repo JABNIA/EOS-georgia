@@ -2,19 +2,14 @@ import "./styles/header.scss";
 import { IoIosSearch } from "react-icons/io";
 import { PiUserCircleLight } from "react-icons/pi";
 import { IoCartOutline } from "react-icons/io5";
-import CategoryMenu from "./categories/CategoryMenu";
 import ListItem from "./categories/components/ListItem";
 import Body from "./categories/components/Body";
 import Shave from "./categories/components/Shave";
 import Lip from "./categories/components/Lip";
-import { useSelector } from "react-redux";
-import type { RootState } from "../store/store";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 
 function Header() {
-    const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
-    const menu = useSelector((state: RootState) => state.CategoryMenu.category);
     const { t: tCommon } = useTranslation("common");
     const { i18n } = useTranslation();
 
@@ -24,15 +19,15 @@ function Header() {
 
     return (
         <header>
-            <img src="./assets/logo.png" alt="EOS logo here" className="logo" />
+            <img src="./assets/logo2.png" alt="EOS logo here" className="logo" />
             <nav>
                 <ul>
                     <NavLink to="/sale" className={"nav-text-title"}>
                         {tCommon("allProducts")}
                     </NavLink>
-                    <ListItem navText="bodyCare" />
-                    <ListItem navText="shave" />
-                    <ListItem navText="lipCare" />
+                    <ListItem navText="bodyCare" element={<Body />}/>
+                    <ListItem navText="shave"  element={<Shave />}/>
+                    <ListItem navText="lipCare"  element={<Lip />}/>
                     <NavLink to="/sale" className={"nav-text-title"}>
                         {tCommon("gifts")}
                     </NavLink>
@@ -44,21 +39,6 @@ function Header() {
                     </NavLink>
                 </ul>
             </nav>
-            {menuOpen && menu === "bodyCare" && (
-                <CategoryMenu>
-                    <Body />
-                </CategoryMenu>
-            )}
-            {menuOpen && menu === "shave" && (
-                <CategoryMenu>
-                    <Shave />
-                </CategoryMenu>
-            )}
-            {menuOpen && menu === "lipCare" && (
-                <CategoryMenu>
-                    <Lip />
-                </CategoryMenu>
-            )}
             <div>
                 <form>
                     <select className="lang-select" name="lang" id="">

@@ -3,11 +3,17 @@ import { SlArrowDown } from "react-icons/sl";
 import "../../styles/category-menu.scss";
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../store/store";
-import { openMenu, setCategory } from "../../../store/reducers/categoryMenu";
+import {
+    setCategory,
+} from "../../../store/reducers/categoryMenu/index";
+import CategoryMenu from "../CategoryMenu";
+import { useState, type ReactNode } from "react";
 
-function ListItem({ navText }: { navText: string }) {
+function ListItem({ navText, element }: { navText: string, element: ReactNode }) {
     const { t: tHeader } = useTranslation("common");
-    const menu = useSelector((state: RootState) => state.CategoryMenu.category);
+    const [menu, setMenu] = useState<boolean>(false)
+    // const menu = useSelector((state: RootState) => state.CategoryMenu.category);
+    // const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
     const isInMenu = useSelector(
         (state: RootState) => state.CategoryMenu.inMenu
     );
@@ -25,12 +31,16 @@ function ListItem({ navText }: { navText: string }) {
         <li
             className="category-menu"
             onMouseEnter={() => {
-                dispatch(openMenu());
+                setMenu(true)
                 dispatch(setCategory(navText));
             }}
+            onMouseLeave={() => setMenu(false)}
         >
             <p className="nav-text-title nav-item">{tHeader(navText)}</p>{" "}
             <SlArrowDown />
+            <CategoryMenu setMenu={setMenu}>
+                {menu && element}
+            </CategoryMenu>
         </li>
     );
 }
