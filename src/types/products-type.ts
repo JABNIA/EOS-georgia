@@ -7,4 +7,5 @@ export interface Product {
   ingredients: string;
   benefits: string;
   howToUse: string;
+  images: string[];
 }

@@ -1,4 +1,3 @@
-import { useEffect } from "react";
 import { Route, Routes, BrowserRouter } from "react-router";
 import Layout from "./components/Layout";
 import HomePage from "./components/HomePage";
@@ -9,9 +8,7 @@ import AddProduct from "./components/pages/admin/pages/addProduct/AddProduct.tsx
 import ManageProducts from "./components/pages/admin/pages/manage-products/ManageProducts.tsx";
 
 function App() {
-    useEffect(() => {}, []);
-
-    return (
+return (
         <BrowserRouter>
             <Routes>
                 <Route path="/" element={<Layout />}>

@@ -1,18 +1,19 @@
+import { useSelector } from "react-redux";
+import type { RootState } from "../../store/store";
 import "../styles/product-slider.scss";
 import ProductCard from "./components/ProductCard";
 
 function ProductSlider() {
+    const products = useSelector((state: RootState) => state.Products.products);
+    console.log(products);
     return (
         <div className="product-slider-container">
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
-            <ProductCard imgLink="https://encrypted-tbn0.gstatic.com/images?q=tbn:ANd9GcTX-coK0riFaFmaRM3LF9Sj-wyHc5WzsCmCSA&s" />
+            {products.map((product) => { return (
+                product.images ? 
+                <ProductCard imgLink={product.images[0]} />
+                : 
+                <ProductCard imgLink={null} />
+            )})}
         </div>
     );
 }

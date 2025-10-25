@@ -6,7 +6,7 @@ interface modalsInterface {
 }
 
 const initialState: modalsInterface = {
-    isOpen: true,
+    isOpen: false,
     type: ""
 }
 
