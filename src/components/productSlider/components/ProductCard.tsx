@@ -1,12 +1,12 @@
 import { useEffect, useState } from "react";
 import { supabase } from "../../../supabase";
-import type { Product } from "../../../types/products-type";
+import type { ProductType } from "../../../types/products-type";
 import { Link } from "react-router";
 
 const placeholdeerImage = 'https://media.istockphoto.com/id/1222357475/vector/image-preview-icon-picture-placeholder-for-website-or-ui-ux-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=KuCo-dRBYV7nz2gbk4J9w1WtTAgpTdznHu55W9FjimE='
 
 
-function ProductCard({ imgLink, product }: { imgLink: string | null, product: Product}) {
+function ProductCard({ imgLink, product }: { imgLink: string | null, product: ProductType}) {
     const [publicUrl, setPublicUrl] = useState<string>(placeholdeerImage);
 
     useEffect(() => {

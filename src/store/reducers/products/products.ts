@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { Product } from "../../../types/products-type";
+import type { ProductType } from "../../../types/products-type";
 
 interface ProductsInterface {
-    products: Product[];
+    products: ProductType[];
     status: "idle" | "loading" | "succeeded" | "failed";
     error: string | null;
 }

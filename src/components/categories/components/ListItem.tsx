@@ -1,8 +1,7 @@
 import { useTranslation } from "react-i18next";
 import { SlArrowDown } from "react-icons/sl";
 import "../../styles/category-menu.scss";
-import { useDispatch, useSelector } from "react-redux";
-import type { RootState } from "../../../store/store";
+import { useDispatch } from "react-redux";
 import { setCategory } from "../../../store/reducers/categoryMenu/index";
 import CategoryMenu from "../CategoryMenu";
 import { useState, type ReactNode } from "react";
@@ -16,11 +15,11 @@ function ListItem({
 }) {
     const { t: tHeader } = useTranslation("common");
     const [menu, setMenu] = useState<boolean>(false);
-    const menuCategory = useSelector((state: RootState) => state.CategoryMenu.category);
+    // const menuCategory = useSelector((state: RootState) => state.CategoryMenu.category);
     // const menuOpen = useSelector((state: RootState) => state.CategoryMenu.open);
-    const isInMenu = useSelector(
-        (state: RootState) => state.CategoryMenu.inMenu
-    );
+    // const isInMenu = useSelector(
+    //     (state: RootState) => state.CategoryMenu.inMenu
+    // );
 
     const dispatch = useDispatch();
 

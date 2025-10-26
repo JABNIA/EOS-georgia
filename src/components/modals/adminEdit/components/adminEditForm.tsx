@@ -1,7 +1,7 @@
 import { useDispatch, useSelector } from "react-redux";
 import type { RootState } from "../../../../store/store";
 import { useState } from "react";
-import type { Product } from "../../../../types/products-type";
+import type { ProductType } from "../../../../types/products-type";
 import AdminEditInput from "./adminEditInput";
 import { setSelectedProduct } from "../../../../store/reducers/products/selectedProduct";
 import { closeModal } from "../../../../store/reducers/modalReducer/modals";
@@ -11,7 +11,7 @@ function AdminEditModalForm() {
     const selectedProduct = useSelector(
         (state: RootState) => state.SelectedProduct.product
     );
-    const [product, setProduct] = useState<Product | null>(selectedProduct);
+    const [product, setProduct] = useState<ProductType | null>(selectedProduct);
     const dispatch = useDispatch();
     const handleInput = (inputing: string, input: string) => {
         switch (inputing) {

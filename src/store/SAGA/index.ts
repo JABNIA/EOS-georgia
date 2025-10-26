@@ -10,7 +10,7 @@ import {
     updateProductsTodo,
 } from "../reducers/products/products";
 import type { PayloadAction } from "@reduxjs/toolkit";
-import type { Product } from "../../types/products-type";
+import type { ProductType } from "../../types/products-type";
 
 export function* getProductData() {
     try {
@@ -45,7 +45,7 @@ export function* deleteProduct(action: PayloadAction<{id: number }>){
     }
 }
 
-export function* updateProduct(action: PayloadAction<Product>){
+export function* updateProduct(action: PayloadAction<ProductType>){
     const updatedProduct = action.payload
 
     try {

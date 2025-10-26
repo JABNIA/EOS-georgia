@@ -9,7 +9,7 @@ import MainModal from "../../../../modals/MainModal";
 import { openModal, setModalType } from "../../../../../store/reducers/modalReducer/modals";
 import { ModalCollection } from "../../../../../ModalNames";
 import { setSelectedProduct } from "../../../../../store/reducers/products/selectedProduct";
-import type { Product } from "../../../../../types/products-type";
+import type { ProductType } from "../../../../../types/products-type";
 
 function ManageProducts() {
     const products = useSelector((state: RootState) => state.Products.products);
@@ -23,7 +23,7 @@ function ManageProducts() {
         dispatch(deleteProductsTodo({id: id}));
     };
 
-    const handleEdit = (product: Product) => {
+    const handleEdit = (product: ProductType) => {
         dispatch(setModalType(ModalCollection.adminEditProduct))
         dispatch(openModal())
         dispatch(setSelectedProduct(product))

@@ -1,14 +1,14 @@
 import React, { useEffect, useState } from "react";
 import { supabase } from "../../../../supabase";
 import Input from "./Input";
-import type { Product } from "../../../../types/products-type";
+import type { ProductType } from "../../../../types/products-type";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsRequest } from "../../../../store/reducers/products/products";
 import type { RootState } from "../../../../store/store";
 
 function AdminForm() {
     const products = useSelector((state: RootState) => state.Products.products);
-    const [product, setProduct] = useState<Product | null>(null);
+    const [product, setProduct] = useState<ProductType | null>(null);
     const [fileList, setFileList] = useState<FileList | null>(null);
     const dispatch = useDispatch();
 
@@ -54,49 +54,49 @@ function AdminForm() {
                     ...product,
                     name: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "description":
                 setProduct({
                     ...product,
                     description: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "price":
                 setProduct({
                     ...product,
                     price: Number(e.target.value),
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "what it is":
                 setProduct({
                     ...product,
                     whatItIs: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "ingredients":
                 setProduct({
                     ...product,
                     ingredients: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "benefits":
                 setProduct({
                     ...product,
                     benefits: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "how to use":
                 setProduct({
                     ...product,
                     howToUse: e.target.value,
                     id: products[products.length - 1].id + 1,
-                } as Product);
+                } as ProductType);
                 break;
             case "upload images":
                 const files = (e.target as HTMLInputElement).files;
@@ -108,7 +108,7 @@ function AdminForm() {
                 setProduct({
                     ...product,
                     images: [...fileNames],
-                } as Product);
+                } as ProductType);
                 setFileList((e.target as HTMLInputElement).files);
                 break;
             default:

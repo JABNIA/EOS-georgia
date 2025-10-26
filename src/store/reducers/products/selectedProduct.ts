@@ -1,8 +1,8 @@
 import { createSlice } from "@reduxjs/toolkit";
-import type { Product } from "../../../types/products-type";
+import type { ProductType } from "../../../types/products-type";
 
 interface selectedProductInitialState {
-    product: Product | null;
+    product: ProductType | null;
 }
 
 const initialState: selectedProductInitialState = { product: null}
