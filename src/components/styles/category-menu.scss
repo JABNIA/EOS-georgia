@@ -2,10 +2,11 @@
 
 .category-menu-wrapper {
     position: absolute;
-    top: 110%;
+    top: 30px;
+    left: calc((100% - 200px)/(2));
     width: 200px;
     gap: 200px;
-    background-color: #fafafa88;
+    background-color: #f8caf4d2;
     border-radius: 16px;
 
 
@@ -23,7 +24,6 @@
         align-items: center;
         flex-shrink: 0;
         list-style: none;
-        // border-radius: 8px;
     }
 
     li:first-child {

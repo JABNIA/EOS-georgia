@@ -6,7 +6,7 @@ function Navigation() {
     return (
         <div className="footer-navigation">
             <Shop />
-            <Resources />
+            {/* <Resources /> */}
             <Support />
         </div>
     );

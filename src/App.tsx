@@ -13,7 +13,7 @@ return (
             <Routes>
                 <Route path="/" element={<Layout />}>
                     <Route index element={<HomePage />} />
-                    <Route path="/Product" element={<Product />} />
+                    <Route path="/product/:id" element={<Product />} />
                 </Route>
                 <Route path="/admin">
                     <Route path="/admin" element={<Admin />}>
