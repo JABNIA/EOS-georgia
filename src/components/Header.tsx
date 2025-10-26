@@ -39,6 +39,11 @@ function Header() {
                     </NavLink>
                 </ul>
             </nav>
+            <div className="icons">
+            
+                <IoIosSearch size={35} color="#4c4a4a" />
+                <PiUserCircleLight size={35} color="#4c4a4a" />
+                <IoCartOutline size={35} color="#4c4a4a" />
             <div>
                 <form>
                     <select className="lang-select" name="lang" id="">
@@ -57,10 +62,6 @@ function Header() {
                     </select>
                 </form>
             </div>
-            <div className="icons">
-                <IoIosSearch size={35} color="#4c4a4a" />
-                <PiUserCircleLight size={35} color="#4c4a4a" />
-                <IoCartOutline size={35} color="#4c4a4a" />
             </div>
         </header>
     );

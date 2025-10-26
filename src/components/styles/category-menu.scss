@@ -49,6 +49,7 @@
     justify-content: flex-start;
     align-items: center;
     gap: 10px;
+    flex-shrink: 0;
 }
 
 .nav-text-title {
@@ -56,6 +57,7 @@
     text-transform: uppercase;
     font-size: 14px;
     color: #484747;
+    flex-shrink: 0;
 }
 
 @keyframes open {
