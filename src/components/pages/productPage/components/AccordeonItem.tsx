@@ -10,15 +10,16 @@ function AccordeonItem({ title, content }: { title: string; content: string }) {
                 <h2 onClick={() => setIsOpen((prev) => !prev)}>{title}</h2>{" "}
                 {isOpen ? <RiArrowUpSLine /> : <MdOutlineKeyboardArrowDown />}
             </div>
-            <p
+            <pre
                 className={
                     isOpen
                         ? "accordeon-item-content-open"
                         : "accordeon-item-content-closed"
                 }
+                style={{whiteSpace: "pre-line"}}
             >
                 {content}
-            </p>
+            </pre>
         </div>
     );
 }
