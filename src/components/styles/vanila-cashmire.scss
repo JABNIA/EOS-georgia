@@ -1,8 +1,11 @@
 .collection-wrapper{
+    width: 100%;
     margin: 40px auto;
+    padding: 32px;
 }
 
 .collection-banner {
+    width: inherit;
     display: block;
     margin: auto;
     border-radius: 16px;
