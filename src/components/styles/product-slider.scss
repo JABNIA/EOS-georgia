@@ -1,5 +1,6 @@
 @use "../../variables" as base;
 .product-slider-container {
+    position: relative;
     height: auto;
     margin: 40px;
     padding: 30px;
@@ -7,6 +8,18 @@
     align-items: center;
     overflow: auto hidden;
     gap: 20px;
+    scroll-behavior: smooth;
+    
+    &::-webkit-scrollbar {
+        background: base.$defaultGray;
+        border-radius: 8px;
+    }
+    
+    &::-webkit-scrollbar-thumb {
+        background: base.$defaultPink;
+        border-radius: 8px;
+        cursor: pointer;
+    }
 }
 
 .card-wrapper {
@@ -19,11 +32,64 @@
     flex-grow: 0;
 }
 
-button {
-    width: 100%;
+.slider-product-button {
+    width: 70%;
     height: 50px;
     border-radius: 15px;
+    margin: auto;
+    display: block;
     flex-shrink: 0;
     font-size: 32px;
     color: base.$defaultPink;
+    border: none;
+    background-color: #e4e420;
+    
+
+    &:hover {
+        background-color: base.$defaultPink;
+        color: base.$defaultWhite;
+        cursor: pointer;
+    }
+}
+
+.product-link {
+    width: 100%;
+    display: block;
+    color: base.$defaultPink;
+    text-decoration: none;
+
+    &:hover {   
+        color: base.$defaultWhite;
+    }
+}
+
+.scroll-button {
+    position: absolute;
+    height: 50%;
+    top: 25%;
+    z-index: 10;
+    width: 140px;
+    border: none;
+    background-color: base.$defaultBlack;
+    color: base.$defaultWhite;
+    cursor: pointer;
+    opacity: 30%;
+
+
+
+    &:hover {
+        opacity: 100%;
+    }
+}
+
+.forward{
+    right: 70px;
+    border-top-left-radius: 50%;
+    border-bottom-left-radius: 50%;
+}
+
+.back {
+    left: 0px;
+    border-top-right-radius: 50%;
+    border-bottom-right-radius: 50%;
 }

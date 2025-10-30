@@ -1,7 +1,9 @@
 .banner {
     display: flex;
     overflow-x: auto;
-    width: 100%;
+    width: 95%;
+    border-radius: 16px;
+    margin: auto;
     min-height: 831px;
     background-color: #f0f0f0;
     scroll-behavior: smooth;

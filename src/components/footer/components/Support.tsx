@@ -5,18 +5,9 @@ function Support() {
 
     return (
         <div className="footer-nav-section">
-            <h3>SOCIALS</h3>
-            <ul>
-                <li className="footer-nav-item">{tFooter("trackYourOrder")}</li>
-                <li className="footer-nav-item">{tFooter("shipping")}</li>
-                <li className="footer-nav-item">{tFooter("contactUs")}</li>
-                <li className="footer-nav-item">{tFooter("helpAndFaq")}</li>
-                <li className="footer-nav-item">{tFooter("privacyPolicy")}</li>
-                <li className="footer-nav-item">{tFooter("accessibility")}</li>
-                <li className="footer-nav-item">{tFooter("sitemap")}</li>
-                <li className="footer-nav-item">
-                    {tFooter("cookiePreference")}
-                </li>
+            <h3>{tFooter("workingHours")}</h3>
+            <ul className="footer-list">
+                <li className="footer-nav-item hours"><span>{tFooter("monSun")}</span><span>{tFooter("hours")}</span></li>
             </ul>
         </div>
     );

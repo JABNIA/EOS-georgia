@@ -85,12 +85,12 @@
     border-radius: 0;
     background-color: transparent;
     color: transparent;
-}
-
-.suggested-scroll:hover {
+    
+    &:hover {
     background-color: #4e4d4d6c;
     cursor: pointer;
     color: base.$defaultWhite;
+    }
 }
 
 .back {

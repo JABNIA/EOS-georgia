@@ -1,15 +1,14 @@
 {
-    "sustainability": "მდგრადობა",
-    "recycleWithUs": "გადამუშავება ჩვენთან",
-    "ingredients": "ჩვენი ინგრედიენტები",
-    "whereToBy": "სად ვიყიდო",
-    "trackYourOrder": "შეკვეთის თვალყურის დევნება",
-    "shipping": "მიწოდება და დაბრუნება",
-    "contactUs": "დაგვიკავშირდით",
-    "helpAndFaq": "დახმარება და ხშირად დასმული კითხვები",
-    "privacyPolicy": "კონფიდენციალურობის პოლიტიკა",
-    "accessibility": "წვდომადობა",
-    "sitemap": "საიტის რუკა",
-    "cookiePreference": "ქუქიების პარამეტრები",
-    "lipCare": "ტუჩის მოვლა"
+    "allProducts": "ყვლა პროდუქტი",
+    "bodyCare": "ტანსი მოვლა",
+    "shave": "საპარსი საშუალებები",
+    "lipCare": "ტუჩის მოვლა",
+    "giftsAndPackages": "საჩუქრები და ნაკრებები",
+    "address": "სულხან ცინცაძის 12",
+    "email": "EOSFORGEORGIA@GMAIL.COM",
+    "number": "598 54 55 26",
+    "contactInfo": "CONTACT INFO",
+    "workingHours": "WORKING HOURS",
+    "monSun":"MON - SUN",
+    "hours": "10am - 10pm"
 }

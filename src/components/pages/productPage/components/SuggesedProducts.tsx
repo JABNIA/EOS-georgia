@@ -62,7 +62,6 @@ function SuggesedProducts() {
         if (ref.current) {
             (ref.current as HTMLDivElement).scrollLeft += scroll;
         }
-        console.log(ref.current);
     };
 
     return (

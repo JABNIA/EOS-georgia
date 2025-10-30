@@ -3,6 +3,8 @@
 footer {
     width: 100%;
     height: auto;
+    display: flex;
+    flex-direction: column;
     padding: 30px 100px;
     background-color: base.$defaultPink;
     color: base.$defaultWhite;
@@ -40,13 +42,29 @@ footer {
         padding: 0;
         list-style: none;
     }
-
+    
     .footer-nav-item {
         margin: 8px 0;
         cursor: pointer;
-
-        &:hover {
-            text-decoration: underline;
-        }
     }
+}
+
+.icon-wrapper {
+    display: inline-block;
+    width: 30px;
+    height: 30px;
+    background-color: base.$defaultWhite;
+    border-radius: 50%;
+    padding: 6px 7px;
+}
+
+.hours {
+    display: flex;
+    gap: 40px;
+    padding-bottom: 20px;
+    border-bottom: 2px solid base.$defaultWhite;
+}
+
+.links:hover{
+    text-decoration: underline;
 }

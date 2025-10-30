@@ -7,15 +7,12 @@ function Shop() {
     return (
         <div className="footer-nav-section">
             <h3>SHOP</h3>
-            <ul>
-                <li className="footer-nav-item">{tCategory("bodyLotion")}</li>
-                <li className="footer-nav-item">{tCategory("bodyWash")}</li>
-                <li className="footer-nav-item">{tCommon("shave")}</li>
-                <li className="footer-nav-item">{tFooter("lipCare")}</li>
-                <li className="footer-nav-item">{tCommon("bestsellers")}</li>
-                <li className="footer-nav-item">{tCommon("exclusives")}</li>
-                <li className="footer-nav-item">{tCommon("awardWinners")}</li>
-                <li className="footer-nav-item">
+            <ul className="footer-list">
+                <li className="footer-nav-item links">{tCategory("bodyLotion")}</li>
+                <li className="footer-nav-item links">{tCategory("bodyWash")}</li>
+                <li className="footer-nav-item links">{tCommon("shave")}</li>
+                <li className="footer-nav-item links">{tFooter("lipCare")}</li>
+                <li className="footer-nav-item links">
                     {tCommon("giftsAndBundles")}
                 </li>
             </ul>

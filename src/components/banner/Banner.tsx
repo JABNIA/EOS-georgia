@@ -8,7 +8,7 @@ function Banner() {
         (state: RootState) => state.Banner.scrollPlace
     );
     const dispatch = useDispatch();
-
+    
     const handleScroll = (scrollLocation: number, scroll: number) => {
         dispatch(setScroll(scrollLocation));
         const banner = document.querySelector(".banner");
