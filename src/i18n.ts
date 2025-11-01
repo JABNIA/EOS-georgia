@@ -11,7 +11,7 @@ i18n
     lng: "ka",
     fallbackLng: "en",
 
-    ns: ["common", "categoryMenu", "header"],
+    ns: ["common", "categoryMenu", "header", "footer"],
     defaultNS: "common",
 
     backend: {

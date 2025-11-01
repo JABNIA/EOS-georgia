@@ -4,8 +4,6 @@ import "../../styles/category-menu.scss";
 function Body() {
     const { t } = useTranslation("categoryMenu");
 
-    console.log(t("allBody"));
-
     return (
         <div>
             <ul>

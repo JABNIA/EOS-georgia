@@ -22,9 +22,9 @@ function ProductSlider() {
         <div className="product-slider-container" ref={ref}>
             {products.map((product) => { return (
                 product.images ? 
-                <ProductCard imgLink={product.images[0]} product={product}/>
+                <ProductCard key={product.id} imgLink={product.images[0]} product={product}/>
                 : 
-                <ProductCard imgLink={null} product={product}/>
+                <ProductCard key={product.id} imgLink={null} product={product}/>
             )})}
         </div>
         </div>
