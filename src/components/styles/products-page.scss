@@ -1,0 +1,12 @@
+@use "../../variables" as base;
+
+
+.products-wrapper{
+    width: 100%;
+    height: auto;
+    margin: 48px;
+    display: flex;
+    justify-content: center;
+    flex-wrap: wrap;
+    gap: 20px;
+}

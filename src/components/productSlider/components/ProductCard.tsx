@@ -4,11 +4,11 @@ import type { ProductType } from "../../../types/products-type";
 import { NavLink } from "react-router";
 import { useTranslation } from "react-i18next";
 
-const placeholdeerImage = 'https://media.istockphoto.com/id/1222357475/vector/image-preview-icon-picture-placeholder-for-website-or-ui-ux-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=KuCo-dRBYV7nz2gbk4J9w1WtTAgpTdznHu55W9FjimE='
+const placeholderImage = 'https://media.istockphoto.com/id/1222357475/vector/image-preview-icon-picture-placeholder-for-website-or-ui-ux-design-vector-illustration.jpg?s=612x612&w=0&k=20&c=KuCo-dRBYV7nz2gbk4J9w1WtTAgpTdznHu55W9FjimE='
 
 
 function ProductCard({ imgLink, product }: { imgLink: string | null, product: ProductType}) {
-    const [publicUrl, setPublicUrl] = useState<string>(placeholdeerImage);
+    const [publicUrl, setPublicUrl] = useState<string>(placeholderImage);
     const { t: tCommon } = useTranslation("common");
 
     useEffect(() => {
@@ -31,7 +31,7 @@ function ProductCard({ imgLink, product }: { imgLink: string | null, product: Pr
             <h4>{product.name}</h4>
             <p>{product.description.substring(0, 95)}</p>
             <button className="slider-product-button">
-                <NavLink to={`product/${product.id}`} className={"product-link"}>
+                <NavLink to={`/product/${product.id}`} className={"product-link"}>
                     {tCommon("visit")}
                 </NavLink>
             </button>

@@ -70,6 +70,15 @@ form {
         border: 1px solid base.$defaultGray;
         padding: 0 16px;
     }
+
+    .category-select{
+        height: 40px;
+        font-size: 18px;
+        font-family: base.$defaultFonts;
+        border-radius: 5px;
+        border: 1px solid base.$defaultGray;
+        padding: 0 16px;
+    }
 }
 
 .admin-submit-button {
@@ -112,3 +121,4 @@ form {
     padding: 0;
     border-radius: 0;
 }
+

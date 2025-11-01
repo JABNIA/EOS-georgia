@@ -11,7 +11,7 @@ function NavSection() {
     return (
         <nav>
             <ul>
-                <NavLink to="/sale" className={"nav-text-title"}>
+                <NavLink to="/products/All" className={"nav-text-title"}>
                     {tCommon("allProducts")}
                 </NavLink>
                 <ListItem navText="bodyCare" element={<Body />} />

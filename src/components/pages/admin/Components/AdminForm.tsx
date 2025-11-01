@@ -5,6 +5,7 @@ import type { ProductType } from "../../../../types/products-type";
 import { useDispatch, useSelector } from "react-redux";
 import { fetchProductsRequest } from "../../../../store/reducers/products/products";
 import type { RootState } from "../../../../store/store";
+import CategorySelection from "./CategorySelection";
 
 function AdminForm() {
     const products = useSelector((state: RootState) => state.Products.products);
@@ -45,7 +46,7 @@ function AdminForm() {
     };
 
     const handleInput = (
-        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement>,
+        e: React.ChangeEvent<HTMLInputElement | HTMLTextAreaElement | HTMLSelectElement>,
         key: string
     ) => {
         switch (key) {
@@ -60,6 +61,13 @@ function AdminForm() {
                 setProduct({
                     ...product,
                     description: e.target.value,
+                    id: products[products.length - 1].id + 1,
+                } as ProductType);
+                break;
+            case "category": 
+                setProduct({
+                    ...product,
+                    category: e.target.value,
                     id: products[products.length - 1].id + 1,
                 } as ProductType);
                 break;
@@ -124,6 +132,7 @@ function AdminForm() {
                 handleInput={handleInput}
                 label="description"
             />
+            <CategorySelection handleInput={handleInput} label="category"/>
             <Input type="text" handleInput={handleInput} label="price" />
             <Input type="text" handleInput={handleInput} label="what it is" />
             <Input type="text" handleInput={handleInput} label="ingredients" />
@@ -146,14 +155,3 @@ function AdminForm() {
 }
 
 export default AdminForm;
-
-// product.images.forEach(async (file) => {
-//     const filePath = `${product.id}/${file.name}`;
-//     const uploadImages = await supabase.storage
-//         .from("EosImages")
-//         .upload(filePath, file, {
-//             cacheControl: "3600",
-//             upsert: false,
-//         });
-//         if(uploadImages.error) throw error;
-// });

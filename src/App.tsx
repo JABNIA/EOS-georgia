@@ -6,6 +6,7 @@ import Product from "./components/pages/productPage/Product.tsx";
 import Admin from "./components/pages/admin/Admin.tsx";
 import AddProduct from "./components/pages/admin/pages/addProduct/AddProduct.tsx";
 import ManageProducts from "./components/pages/admin/pages/manage-products/ManageProducts.tsx";
+import Products from "./components/products/Products.tsx";
 
 function App() {
 return (
@@ -14,6 +15,7 @@ return (
                 <Route path="/" element={<Layout />}>
                     <Route index element={<HomePage />} />
                     <Route path="/product/:id" element={<Product />} />
+                    <Route path="/products/:category" element={<Products />} />
                 </Route>
                 <Route path="/admin">
                     <Route path="/admin" element={<Admin />}>

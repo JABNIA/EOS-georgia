@@ -1,5 +1,6 @@
 import { useTranslation } from "react-i18next";
 import "../../styles/category-menu.scss";
+import { NavLink } from "react-router";
 
 function Body() {
     const { t } = useTranslation("categoryMenu");
@@ -7,12 +8,12 @@ function Body() {
     return (
         <div>
             <ul>
-                <li className="category-item">{t("bodyLotion")}</li>
-                <li className="category-item">{t("bodyWash")}</li>
-                <li className="category-item">{t("handCreme")}</li>
-                <li className="category-item">{t("bodyButter")}</li>
-                <li className="category-item">{t("bodyOil")}</li>
-                <li className="category-item">{t("bodyMist")}</li>
+                <li className="category-item"><NavLink to="/products/body lotion">{t("bodyLotion")}</NavLink></li>
+                <li className="category-item"><NavLink to="/products/shower gel">{t("bodyWash")}</NavLink></li>
+                <li className="category-item"><NavLink to="/products/hand creme">{t("handCreme")}</NavLink></li>
+                <li className="category-item"><NavLink to="/products/body butter">{t("bodyButter")}</NavLink></li>
+                <li className="category-item"><NavLink to="/products/body oil">{t("bodyOil")}</NavLink></li>
+                <li className="category-item"><NavLink to="/products/body mist">{t("bodyMist")}</NavLink></li>
             </ul>
         </div>
     );
